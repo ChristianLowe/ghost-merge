@@ -2,8 +2,11 @@ extends KinematicBody2D
 
 export var speed: int = 100
 
-var target = Vector2()
-var velocity = Vector2()
+var target: Vector2
+var velocity = Vector2.ZERO
+
+func _ready():
+	target = Vector2(global_position.x, global_position.y)
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
