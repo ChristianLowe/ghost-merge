@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
-export var speed: int = 100
+export var speed: int = 250
 
 onready var target = Vector2(global_position.x, global_position.y)
-onready var velocity = Vector2.ZERO
-
 onready var root = get_parent().get_parent()
+
+var velocity = Vector2.ZERO
+var merged: Node2D = null
 
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
@@ -22,4 +23,4 @@ func _physics_process(delta):
 
 func attempt_merge(interactable):
 	if interactable in $InteractableArea.in_range:
-		print("Reason number two. Look what I can do.")
+		root.merge_player(self, interactable)
