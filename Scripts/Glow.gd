@@ -6,6 +6,9 @@ func _ready():
 
 	sprite.texture = parent_sprite.texture
 	sprite.global_position = parent_sprite.global_position
+	sprite.vframes = parent_sprite.vframes
+	sprite.hframes = parent_sprite.hframes
+	sprite.frame = parent_sprite.frame
 
 	sprite.centered = true
 	parent_sprite.centered = true

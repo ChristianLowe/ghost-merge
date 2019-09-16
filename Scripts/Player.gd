@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed: int = 250
+export var speed: int = 200
 
 onready var target = Vector2(global_position.x, global_position.y)
 onready var root = get_parent().get_parent()
@@ -10,6 +10,7 @@ var merged: Node2D = null
 
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
+	
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
@@ -17,7 +18,7 @@ func _input(event):
 
 func _physics_process(delta):
 	velocity = (target - global_position).normalized() * speed
-	rotation = velocity.angle()
+#	rotation = velocity.angle()
 	if (target - global_position).length() > 5:
 		velocity = move_and_slide(velocity)
 

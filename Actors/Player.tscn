@@ -1,19 +1,19 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/ghost.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/mc/front.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/InteractableArea.gd" type="Script" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 175.0
+radius = 20.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 800.0
+radius = 90.0
 
 [node name="Player" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 0, -19.3934 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]

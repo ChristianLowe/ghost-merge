@@ -6,4 +6,8 @@ func _ready():
 	pass
 
 func interact():
-	root.get_node('Door').open_door()
+	$AnimationPlayer.play('PullLever')
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == 'PullLever':
+		root.get_node('Door').open_door()
