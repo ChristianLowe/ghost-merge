@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/armor-back.png-6e4b7bad5c8336dd0d871d5bdaa0e2ca.stex"
+path="res://.import/dollar-sign.png-221044f2d84876ebe5a8ab710d66870b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Armor/armor-back.png"
-dest_files=[ "res://.import/armor-back.png-6e4b7bad5c8336dd0d871d5bdaa0e2ca.stex" ]
+source_file="res://FlavorAssets/dollar-sign.png"
+dest_files=[ "res://.import/dollar-sign.png-221044f2d84876ebe5a8ab710d66870b.stex" ]
 
 [params]
 
