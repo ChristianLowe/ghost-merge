@@ -6,6 +6,8 @@ onready var player = load("res://Actors/Player.tscn")
 onready var unmerge_button = load("res://UI/UnmergeButton.tscn")
 onready var interact_button = load("res://UI/InteractButton.tscn")
 
+export (String, FILE, '*tscn') var next_scene_path
+
 var interacting_object = null
 var player_position = null
 
@@ -37,5 +39,8 @@ func show_player():
 		interacting_object = null
 		
 		unmerge_button_instance.queue_free()
+
+func change_scene():	
+	get_tree().change_scene(next_scene_path)
 
 
