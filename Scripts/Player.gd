@@ -7,16 +7,22 @@ onready var root = get_parent().get_parent()
 
 var velocity = Vector2.ZERO
 var merged: Node2D = null
+var interactable: Node2D = null
 
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
-	
 
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		target = get_global_mouse_position()
 		
-func get_direction(angle):	
+		var direction = get_direction(target)
+		if direction != null:
+			$Sprite.animation = direction
+		
+func get_direction(target):	
+	var angle = ((target - global_position).normalized() * speed).angle()
+
 	if angle > 1.125 and angle < 1.875:
 		return 'front'
 	elif angle > 1.875 and angle < 2.625:
@@ -39,14 +45,22 @@ func get_direction(angle):
 func _physics_process(delta):
 	velocity = (target - global_position).normalized() * speed
 		
-	var angle = velocity.angle()
-	var direction = get_direction(angle)
-	if direction != null:
-		$Sprite.animation = direction
-		
 	if (target - global_position).length() > 5:
 		velocity = move_and_slide(velocity)
 
+func play_merge_animation(target):	
+	var direction = get_direction(target)
+	if direction != null:
+		$Sprite.stop()
+		$Sprite.set_frame(0)
+		$Sprite.play(direction + '_merge')
+
 func attempt_merge(interactable):
 	if interactable in $InteractableArea.in_range:
+		self.interactable = interactable
+		speed = 0
+		play_merge_animation(interactable.global_position)
+		
+func _on_Sprite_animation_finished():
+	if 'merge' in $Sprite.animation:
 		root.merge_player(self, interactable)
