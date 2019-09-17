@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ball-ghost.png-fc94b04929480e358a8cd62dad8bda1a.stex"
+path="res://.import/merge-orb.png-14c2bff0372945af13c4a6a1269906ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ghost/ball-ghost.png"
-dest_files=[ "res://.import/ball-ghost.png-fc94b04929480e358a8cd62dad8bda1a.stex" ]
+source_file="res://Sprites/Ghost/merge-orb.png"
+dest_files=[ "res://.import/merge-orb.png-14c2bff0372945af13c4a6a1269906ca.stex" ]
 
 [params]
 
