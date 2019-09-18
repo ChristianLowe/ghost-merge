@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 export var speed: int = 200
+export var direction: String = ""
 
 onready var target = Vector2(global_position.x, global_position.y)
 onready var root = get_parent().get_parent()
@@ -16,28 +17,28 @@ func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		target = get_global_mouse_position()
 		
-		var direction = get_direction(target)
+		direction = get_direction(target)
 		if direction != null:
 			$Sprite.animation = direction
 		
 func get_direction(target):	
 	var angle = ((target - global_position).normalized() * speed).angle()
 
-	if angle > 1.125 and angle < 1.875:
+	if angle >= 1.125 and angle < 1.875:
 		return 'front'
-	elif angle > 1.875 and angle < 2.625:
+	elif angle >= 1.875 and angle < 2.625:
 		return 'front_left'
-	elif (angle > 2.625 and angle < PI) or (angle > -PI and angle < -2.625):
+	elif (angle >= 2.625 and angle <= 3.15) or (angle >= -3.15 and angle <= -2.625):
 		return 'left'
 	elif angle > -2.625 and angle < -1.875:
 		return 'back_left'
-	elif angle > -1.875 and angle < -1.125:
+	elif angle >= -1.875 and angle < -1.125:
 		return 'back'
-	elif angle > -1.125 and angle < -0.375:
+	elif angle >= -1.125 and angle < -0.375:
 		return 'back_right'
-	elif angle > -0.375 and angle < 0.375:
+	elif angle >= -0.375 and angle < 0.375:
 		return 'right'
-	elif angle > 0.375 and angle < 1.125:
+	elif angle >= 0.375 and angle < 1.125:
 		return 'front_right'
 		
 	return 'default'
@@ -48,16 +49,15 @@ func _physics_process(delta):
 	if (target - global_position).length() > 5:
 		velocity = move_and_slide(velocity)
 
-func play_merge_animation(target):	
-	var direction = get_direction(target)
+func play_merge_animation(target):
+	direction = get_direction(target)
 	if direction != null:
 		$Sprite.stop()
 		$Sprite.set_frame(0)
 		$Sprite.play(direction + '_merge')
 		
-func play_merge_back_animation(target):
-	print('hello')
-	var direction = get_direction(target)
+func play_merge_back_animation(target, dir):
+	direction = dir
 	if direction != null:
 		$Sprite.stop()
 		$Sprite.set_frame(0)
@@ -70,5 +70,10 @@ func attempt_merge(interactable):
 		play_merge_animation(interactable.global_position)
 		
 func _on_Sprite_animation_finished():
+	print($Sprite.animation)
 	if 'merge' in $Sprite.animation:
-		root.merge_player(self, interactable)
+		if 'back' in $Sprite.animation:
+			$Sprite.play(direction)
+		else:
+			print("yo")
+			root.merge_player(self, interactable)

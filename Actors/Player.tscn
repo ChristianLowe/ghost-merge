@@ -1,134 +1,133 @@
-[gd_scene load_steps=133 format=2]
+[gd_scene load_steps=132 format=2]
 
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Ghost/right.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Ghost/left.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/black-box.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Ghost/back.png" type="Texture" id=4]
 [ext_resource path="res://Sprites/Ghost/front.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Ghost/back.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge1.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge2.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge3.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge4.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge5.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge6.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge7.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge8.png" type="Texture" id=14]
-[ext_resource path="res://Sprites/Ghost/backleft.png" type="Texture" id=15]
-[ext_resource path="res://Sprites/Ghost/frontleft.png" type="Texture" id=16]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge1.png" type="Texture" id=17]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge2.png" type="Texture" id=18]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge3.png" type="Texture" id=19]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge4.png" type="Texture" id=20]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge5.png" type="Texture" id=21]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge6.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge7.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge8.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge1.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge2.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge3.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge4.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge5.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge6.png" type="Texture" id=30]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge7.png" type="Texture" id=31]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge8.png" type="Texture" id=32]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge1.png" type="Texture" id=33]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge2.png" type="Texture" id=34]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge3.png" type="Texture" id=35]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge4.png" type="Texture" id=36]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge5.png" type="Texture" id=37]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge6.png" type="Texture" id=38]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge7.png" type="Texture" id=39]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge8.png" type="Texture" id=40]
-[ext_resource path="res://Sprites/Ghost/frontright.png" type="Texture" id=41]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge1.png" type="Texture" id=42]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge2.png" type="Texture" id=43]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge3.png" type="Texture" id=44]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge4.png" type="Texture" id=45]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge5.png" type="Texture" id=46]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge6.png" type="Texture" id=47]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge7.png" type="Texture" id=48]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge8.png" type="Texture" id=49]
-[ext_resource path="res://Sprites/Ghost/backright.png" type="Texture" id=50]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge1.png" type="Texture" id=51]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge2.png" type="Texture" id=52]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge3.png" type="Texture" id=53]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge4.png" type="Texture" id=54]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge5.png" type="Texture" id=55]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge6.png" type="Texture" id=56]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge7.png" type="Texture" id=57]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge8.png" type="Texture" id=58]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge1.png" type="Texture" id=59]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge2.png" type="Texture" id=60]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge3.png" type="Texture" id=61]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge4.png" type="Texture" id=62]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge5.png" type="Texture" id=63]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge6.png" type="Texture" id=64]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge7.png" type="Texture" id=65]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge8.png" type="Texture" id=66]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge1.png" type="Texture" id=67]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge2.png" type="Texture" id=68]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge3.png" type="Texture" id=69]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge4.png" type="Texture" id=70]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge5.png" type="Texture" id=71]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge6.png" type="Texture" id=72]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge7.png" type="Texture" id=73]
-[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge8.png" type="Texture" id=74]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge1.png" type="Texture" id=75]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge2.png" type="Texture" id=76]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge3.png" type="Texture" id=77]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge4.png" type="Texture" id=78]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge5.png" type="Texture" id=79]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge6.png" type="Texture" id=80]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge7.png" type="Texture" id=81]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge8.png" type="Texture" id=82]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge9.png" type="Texture" id=83]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge1.png" type="Texture" id=84]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge2.png" type="Texture" id=85]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge3.png" type="Texture" id=86]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge4.png" type="Texture" id=87]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge5.png" type="Texture" id=88]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge6.png" type="Texture" id=89]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge7.png" type="Texture" id=90]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge8.png" type="Texture" id=91]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge9.png" type="Texture" id=92]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge1.png" type="Texture" id=93]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge2.png" type="Texture" id=94]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge3.png" type="Texture" id=95]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge4.png" type="Texture" id=96]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge5.png" type="Texture" id=97]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge6.png" type="Texture" id=98]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge7.png" type="Texture" id=99]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge8.png" type="Texture" id=100]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge9.png" type="Texture" id=101]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge1.png" type="Texture" id=102]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge2.png" type="Texture" id=103]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge3.png" type="Texture" id=104]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge4.png" type="Texture" id=105]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge5.png" type="Texture" id=106]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge6.png" type="Texture" id=107]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge7.png" type="Texture" id=108]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge8.png" type="Texture" id=109]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge9.png" type="Texture" id=110]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge1.png" type="Texture" id=111]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge2.png" type="Texture" id=112]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge3.png" type="Texture" id=113]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge4.png" type="Texture" id=114]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge5.png" type="Texture" id=115]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge6.png" type="Texture" id=116]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge7.png" type="Texture" id=117]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge8.png" type="Texture" id=118]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge9.png" type="Texture" id=119]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge1.png" type="Texture" id=120]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge2.png" type="Texture" id=121]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge3.png" type="Texture" id=122]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge4.png" type="Texture" id=123]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge5.png" type="Texture" id=124]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge6.png" type="Texture" id=125]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge7.png" type="Texture" id=126]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge8.png" type="Texture" id=127]
-[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge9.png" type="Texture" id=128]
-[ext_resource path="res://Scripts/InteractableArea.gd" type="Script" id=129]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge7.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backleft/backleft-merge8.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Ghost/backleft.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Ghost/frontleft.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge3.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge4.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge5.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge6.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge7.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/backright/backright-merge8.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge1.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge2.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge3.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge4.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge5.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge6.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge7.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/right/right-merge8.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge1.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge2.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge3.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge4.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge5.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge6.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge7.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/left/left-merge8.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Ghost/frontright.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge1.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge2.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge3.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge4.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge5.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge6.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge7.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/front/front-merge8.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/Ghost/backright.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge1.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge2.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge3.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge4.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge5.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge6.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge7.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontright/frontright-merge8.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge1.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge2.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge3.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge4.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge5.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge6.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge7.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge8.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge1.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge2.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge3.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge4.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge5.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge6.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge7.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Ghost/Animations/merge/back/back-merge8.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge1.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge2.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge3.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge4.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge5.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge6.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge7.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge8.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backleft/backleft-merge9.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge1.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge2.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge3.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge4.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge5.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge6.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge7.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge8.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/front/front-merge9.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge1.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge2.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge3.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge4.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge5.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge6.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge7.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge8.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/frontright/frontright-merge9.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge1.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge2.png" type="Texture" id=102]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge3.png" type="Texture" id=103]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge4.png" type="Texture" id=104]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge5.png" type="Texture" id=105]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge6.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge7.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge8.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/backright/backright-merge9.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge1.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge2.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge3.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge4.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge5.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge6.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge7.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge8.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/right/right-merge9.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge1.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge2.png" type="Texture" id=120]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge3.png" type="Texture" id=121]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge4.png" type="Texture" id=122]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge5.png" type="Texture" id=123]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge6.png" type="Texture" id=124]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge7.png" type="Texture" id=125]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge8.png" type="Texture" id=126]
+[ext_resource path="res://Sprites/Ghost/Animations/MergeBack/back/back-merge9.png" type="Texture" id=127]
+[ext_resource path="res://Scripts/InteractableArea.gd" type="Script" id=128]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -152,107 +151,107 @@ animations = [ {
 "name": "front",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "back_left_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 15 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
 "name": "back_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ) ],
+"frames": [ ExtResource( 15 ) ],
 "loop": true,
 "name": "front_left",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "back_right_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "right_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ) ],
 "loop": true,
 "name": "left_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 41 ) ],
+"frames": [ ExtResource( 40 ) ],
 "loop": true,
 "name": "front_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ) ],
+"frames": [ ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
 "loop": true,
 "name": "front_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 50 ) ],
+"frames": [ ExtResource( 49 ) ],
 "loop": true,
 "name": "back_right",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ) ],
+"frames": [ ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ) ],
 "loop": true,
 "name": "front_right_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ) ],
+"frames": [ ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
 "loop": true,
 "name": "front_left_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ) ],
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
 "loop": true,
 "name": "back_merge",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ) ],
+"frames": [ ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ) ],
 "loop": true,
 "name": "back_left_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ) ],
 "loop": true,
 "name": "front_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ) ],
+"frames": [ ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
 "loop": true,
 "name": "front_right_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ) ],
+"frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ) ],
 "loop": true,
 "name": "back_right_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ) ],
 "loop": true,
 "name": "front_left_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ) ],
+"frames": [ ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ) ],
 "loop": true,
 "name": "right_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"frames": [ ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ) ],
 "loop": true,
 "name": "left_merge_back",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
+"frames": [ ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ) ],
 "loop": true,
 "name": "back_merge_back",
 "speed": 5.0
@@ -272,14 +271,13 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="KinematicBody2D"]
 frames = SubResource( 1 )
-animation = "front"
 speed_scale = 2.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 2 )
 
 [node name="InteractableArea" type="Area2D" parent="KinematicBody2D"]
-script = ExtResource( 129 )
+script = ExtResource( 128 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/InteractableArea"]
 shape = SubResource( 3 )
