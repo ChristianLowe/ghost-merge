@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 export var speed: int = 200
-export var direction: String = ""
 
+onready var direction = ''
 onready var target = Vector2(global_position.x, global_position.y)
 onready var root = get_parent().get_parent()
 
