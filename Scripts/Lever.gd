@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var root = get_parent().get_parent()
-onready var state;
+onready var state = "left"
 
 func _ready():
 	state = "left"
@@ -10,11 +10,11 @@ func _ready():
 func interact():
 	print(state)
 	if state == "left":
-		$AnimationPlayer.play('PullLever');
-		state = "right";
+		$AnimationPlayer.play('PullLever')
+		state = "right"
 	elif state == "right":
-		$AnimationPlayer.play('PullLeverReverse');
-		state = "left";
+		$AnimationPlayer.play('PullLeverReverse')
+		state = "left"
 		
 
 func _on_AnimationPlayer_animation_finished(anim_name):
