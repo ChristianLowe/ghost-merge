@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frontleft-merge1.png-d8db26ec90a219417b4f39f20c158b3a.stex"
+path="res://.import/frontleft-merge1.png-6aaa31eeb3941da9840c07daa5028e66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ghost/Animations/merge/frontleft/frontleft-merge1.png"
-dest_files=[ "res://.import/frontleft-merge1.png-d8db26ec90a219417b4f39f20c158b3a.stex" ]
+source_file="res://Sprites/Ghost/Animations/Merge/frontleft/frontleft-merge1.png"
+dest_files=[ "res://.import/frontleft-merge1.png-6aaa31eeb3941da9840c07daa5028e66.stex" ]
 
 [params]
 

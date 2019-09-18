@@ -58,6 +58,7 @@ func merge_player(player, interactable):
 
 func show_player():
 	if interacting_object != null:
+		print(user_direction)
 		var player_instance = player.instance()
 		player_instance.global_position = player_position
 		add_child(player_instance)

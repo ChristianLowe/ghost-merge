@@ -50,7 +50,6 @@ func _physics_process(delta):
 		velocity = move_and_slide(velocity)
 
 func play_merge_animation(target):
-	direction = get_direction(target)
 	if direction != null:
 		$Sprite.stop()
 		$Sprite.set_frame(0)
@@ -61,7 +60,7 @@ func play_merge_back_animation(target, dir):
 	if direction != null:
 		$Sprite.stop()
 		$Sprite.set_frame(0)
-		$Sprite.play(direction + '_merge_back')
+		$Sprite.play(direction + '_remerge')
 
 func attempt_merge(interactable):
 	if interactable in $InteractableArea.in_range:
@@ -70,10 +69,8 @@ func attempt_merge(interactable):
 		play_merge_animation(interactable.global_position)
 		
 func _on_Sprite_animation_finished():
-	print($Sprite.animation)
 	if 'merge' in $Sprite.animation:
-		if 'back' in $Sprite.animation:
+		if 'remerge' in $Sprite.animation:
 			$Sprite.play(direction)
 		else:
-			print("yo")
 			root.merge_player(self, interactable)
