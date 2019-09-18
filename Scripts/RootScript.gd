@@ -11,6 +11,7 @@ onready var interact_button = load("res://UI/InteractButton.tscn")
 export (String, FILE, '*tscn') var next_scene_path
 
 var interacting_object = null
+
 var player_position = null
 
 var unmerge_button_instance = null
@@ -30,6 +31,7 @@ func merge_player(player, interactable):
 	player.queue_free()
 	
 	var ghost_trail_instance = ghost_trail.instance()
+	ghost_trail_instance.global_position = player_position
 	ghost_trail_instance.target_point = interactable.global_position
 	add_child(ghost_trail_instance)
 
@@ -43,10 +45,6 @@ func show_player():
 		interacting_object.set_process_input(false)
 		
 		unmerge_button_instance.queue_free()
-		
-		var ghost_trail_instance = ghost_trail.instance()
-		ghost_trail_instance.target_point = player_position
-		add_child(ghost_trail_instance)
 		
 		player_position = null
 		interacting_object = null
