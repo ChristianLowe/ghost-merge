@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/armor-front.png-031ee6d64a509efe2c59afba56d0d57a.stex"
+path="res://.import/armor-front.png-b52aad57671577b0eba1d9c09d00a259.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Armor/animations/forward/armor-front.png"
-dest_files=[ "res://.import/armor-front.png-031ee6d64a509efe2c59afba56d0d57a.stex" ]
+source_file="res://Sprites/armor/animations/forward/armor-front.png"
+dest_files=[ "res://.import/armor-front.png-b52aad57671577b0eba1d9c09d00a259.stex" ]
 
 [params]
 

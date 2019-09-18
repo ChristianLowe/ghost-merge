@@ -1,11 +1,14 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Scripts/RootScript.gd" type="Script" id=1]
 [ext_resource path="res://TileSets/DungeonTileSets/tileset guide/images/image12.png" type="Texture" id=2]
 [ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Actors/SuitArmor.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -259,12 +262,19 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 5, 3, 0, 5, 4, 0, 4, 5, 0, 2, 
 [node name="Lever" parent="Interactable" instance=ExtResource( 4 )]
 position = Vector2( 222.479, 50.2211 )
 
-[node name="Door" parent="." instance=ExtResource( 5 )]
+[node name="SuitArmor" parent="Interactable" instance=ExtResource( 5 )]
+position = Vector2( 230.702, 352.877 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 145.754, 31.723 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 143.198, 162.793 )
 current = true
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
+[node name="Player" parent="." instance=ExtResource( 7 )]
 position = Vector2( 100, 260 )
+
+[node name="Control" parent="." instance=ExtResource( 8 )]
+
+[node name="Control2" parent="." instance=ExtResource( 9 )]
