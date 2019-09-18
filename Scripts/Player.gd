@@ -54,6 +54,14 @@ func play_merge_animation(target):
 		$Sprite.stop()
 		$Sprite.set_frame(0)
 		$Sprite.play(direction + '_merge')
+		
+func play_merge_back_animation(target):
+	print('hello')
+	var direction = get_direction(target)
+	if direction != null:
+		$Sprite.stop()
+		$Sprite.set_frame(0)
+		$Sprite.play(direction + '_merge_back')
 
 func attempt_merge(interactable):
 	if interactable in $InteractableArea.in_range:

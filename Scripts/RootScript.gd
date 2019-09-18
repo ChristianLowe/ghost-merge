@@ -32,6 +32,7 @@ func show_player():
 		var player_instance = player.instance()
 		player_instance.global_position = player_position
 		add_child(player_instance)
+		player_instance.get_node('KinematicBody2D').play_merge_back_animation(player_position)
 		
 		interacting_object.set_process_input(false)
 		
