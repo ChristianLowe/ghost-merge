@@ -58,9 +58,15 @@ func merge_player(player, interactable):
 
 func show_player():
 	if interacting_object != null:
-		print(user_direction)
 		var player_instance = player.instance()
 		player_instance.global_position = player_position
+		
+		var interactable = interacting_object
+		var ghost_trail_instance = ghost_trail.instance()
+		ghost_trail_instance.global_position = interactable.global_position
+		ghost_trail_instance.target_point = player_position
+		add_child(ghost_trail_instance)
+		
 		add_child(player_instance)
 		player_instance.get_node('KinematicBody2D').play_merge_back_animation(player_position, user_direction)
 		

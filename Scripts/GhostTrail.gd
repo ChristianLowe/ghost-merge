@@ -11,4 +11,5 @@ func _process(delta):
 		
 		if (target_point - global_position).length() < 5:
 			$Particles2D.emitting = false
+			$Particles2DStream.emitting = false
 			set_process(false)
