@@ -27,12 +27,13 @@ var user_direction = null
 func merge_player(player, interactable):
 	interacting_object = interactable
 	interacting_object.set_process_input(true)
+	if interacting_object.get_node('Sprite').is_class('AnimatedSprite'):
+		interacting_object.get_node('Sprite').playing = true
+	#unmerge_button_instance = unmerge_button.instance()
+	#add_child(unmerge_button_instance)
 	
-	unmerge_button_instance = unmerge_button.instance()
-	add_child(unmerge_button_instance)
-	
-	interact_button_instance = interact_button.instance()
-	add_child(interact_button_instance)
+	#interact_button_instance = interact_button.instance()
+	#add_child(interact_button_instance)
 	
 	player_position = player.global_position
 	
@@ -72,7 +73,9 @@ func show_player():
 		
 		interacting_object.set_process_input(false)
 		
-		unmerge_button_instance.queue_free()
+		if interacting_object.get_node('Sprite').is_class('AnimatedSprite'):
+			interacting_object.get_node('Sprite').playing = false
+		#unmerge_button_instance.queue_free()
 		
 		player_position = null
 		interacting_object = null
