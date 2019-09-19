@@ -10,6 +10,7 @@ var velocity = Vector2.ZERO
 var merged: Node2D = null
 var interactable: Node2D = null
 
+
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
 
@@ -63,7 +64,7 @@ func play_merge_back_animation(target, dir):
 		$Sprite.play(direction + '_remerge')
 
 func attempt_merge(interactable):
-	if interactable in $InteractableArea.in_range:
+	if interactable in $InteractableArea.in_range and root.can_player_merge():
 		self.interactable = interactable
 		speed = 0
 		play_merge_animation(interactable.global_position)
