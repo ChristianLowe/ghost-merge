@@ -22,3 +22,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 		root.get_node('Door').open_door()
 	if anim_name == 'PullLeverReverse':
 		root.get_node('Door').close_door()
+		
+func set_modulate_color(color):
+	$Sprite.set("modulate", color)

@@ -23,10 +23,13 @@ var interact_button_instance = null
 var hat_cane_instance = null
 var merge_orb_instance = null
 var user_direction = null
+var modulate_default = 'ffffff'
+var modulate_active = 'ffc80a'
 
 func merge_player(player, interactable):
 	interacting_object = interactable
 	interacting_object.set_process_input(true)
+	interactable.set_modulate_color(modulate_active)
 	if interacting_object.get_node('Sprite').is_class('AnimatedSprite'):
 		interacting_object.get_node('Sprite').playing = true
 	#unmerge_button_instance = unmerge_button.instance()
@@ -63,6 +66,9 @@ func show_player():
 		player_instance.global_position = player_position
 		
 		var interactable = interacting_object
+		
+		interactable.set_modulate_color(modulate_default)
+		
 		var ghost_trail_instance = ghost_trail.instance()
 		ghost_trail_instance.global_position = interactable.global_position
 		ghost_trail_instance.target_point = player_position

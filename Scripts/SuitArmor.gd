@@ -48,3 +48,6 @@ func _physics_process(delta):
 		
 func interact():
 	print(get_name() + ' interacting...')
+	
+func set_modulate_color(color):
+	$Sprite.set("modulate", color)

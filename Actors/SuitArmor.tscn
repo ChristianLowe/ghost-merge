@@ -1,31 +1,31 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/SuitArmor.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/armor/animations/left/armor-left-1.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/armor/animations/left/armor-left-2.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/armor/animations/left/armor-left.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/armor/animations/right/armor-right-1.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/armor/animations/right/armor-right-2.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/armor/animations/right/armor-right.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/armor/animations/right/armor-right-1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/armor/animations/right/armor-right-2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/armor/animations/right/armor-right.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/armor/animations/left/armor-left-1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/armor/animations/left/armor-left-2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/armor/animations/left/armor-left.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/black-box.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/armor/animations/forward/armor-front-1.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/armor/animations/forward/armor-front-2.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/armor/animations/forward/armor-front.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/armor/animations/back/armor-back-1.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/armor/animations/back/armor-back-2.png" type="Texture" id=13]
-[ext_resource path="res://Sprites/armor/animations/back/armor-back.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/armor/animations/back/armor-back-1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/armor/animations/back/armor-back-2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/armor/animations/back/armor-back.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/armor/animations/forward/armor-front-1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/armor/animations/forward/armor-front-2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/armor/animations/forward/armor-front.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/SignalClicked.gd" type="Script" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
-"name": "left",
+"name": "right",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "right",
+"name": "left",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 8 ) ],
@@ -35,13 +35,13 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "front",
-"speed": 3.0
+"name": "back",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "back",
-"speed": 5.0
+"name": "front",
+"speed": 3.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
