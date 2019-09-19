@@ -12,6 +12,8 @@ onready var merge_orb = load("res://Actors/MergeOrb.tscn")
 onready var hat_cane_left_texture = load("res://Sprites/Ghost/hat-cane-left.png")
 onready var hat_cane_texture = load("res://Sprites/Ghost/hat-cane.png")
 
+export var merge_count: int = 2
+
 export (String, FILE, '*tscn') var next_scene_path
 
 var interacting_object = null
@@ -28,6 +30,7 @@ var modulate_active = 'ffc80a'
 
 func _ready():
 	SoundController.play_bg()
+	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 
 func merge_player(player, interactable):
 	interacting_object = interactable
@@ -62,6 +65,10 @@ func merge_player(player, interactable):
 	ghost_trail_instance.global_position = player_position
 	ghost_trail_instance.target_point = interactable.global_position
 	add_child(ghost_trail_instance)
+	
+	merge_count -= 1
+	
+	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 
 func show_player():
 	if interacting_object != null:
@@ -88,6 +95,9 @@ func show_player():
 		
 		player_position = null
 		interacting_object = null
+
+func can_player_merge():
+	return merge_count > 0
 
 func change_scene():	
 	get_tree().change_scene(next_scene_path)
