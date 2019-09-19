@@ -19,6 +19,10 @@ config/name="Ghost Merge"
 run/main_scene="res://Scenes/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SoundController="*res://Actors/SoundController.tscn"
+
 [display]
 
 window/size/width=1280

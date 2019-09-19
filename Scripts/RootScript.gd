@@ -26,6 +26,9 @@ var user_direction = null
 var modulate_default = 'ffffff'
 var modulate_active = 'ffc80a'
 
+func _ready():
+	SoundController.play_bg()
+
 func merge_player(player, interactable):
 	interacting_object = interactable
 	interacting_object.set_process_input(true)
