@@ -10,7 +10,7 @@
 [ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://UI/MergeCountLabel.tscn" type="PackedScene" id=9]
 
-[sub_resource type="GDScript" id=26]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
 onready var root = get_parent()
@@ -57,4 +57,4 @@ position = Vector2( 100, 260 )
 [node name="ResetButton" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
 margin_bottom = 40.0
-script = SubResource( 26 )
+script = SubResource( 1 )
