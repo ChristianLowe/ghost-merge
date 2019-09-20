@@ -1,13 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/Gate.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://TileSets/DungeonTileSets/gates.png" type="Texture" id=3]
+[ext_resource path="res://TileSets/DungeonTileSets/vertical_gate.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 31.713, 32.3362 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "close"
 length = 0.4
 tracks/0/type = "value"
@@ -23,7 +24,38 @@ tracks/0/keys = {
 "values": [ 3, 2, 1, 0 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "close"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=5]
 resource_name = "open"
 length = 0.4
 tracks/0/type = "value"
@@ -54,13 +86,25 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource( 1 )
 
-[node name="Sprite2" type="Sprite" parent="."]
+[node name="HorizontalGate" type="Sprite" parent="."]
 position = Vector2( -2, 0 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 3 )
 hframes = 4
 frame = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2"]
-anims/close = SubResource( 3 )
-anims/open = SubResource( 2 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HorizontalGate"]
+anims/close = SubResource( 2 )
+anims/open = SubResource( 3 )
+
+[node name="VerticleGate" type="Sprite" parent="."]
+visible = false
+position = Vector2( -2, -23.8329 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VerticleGate"]
+anims/close = SubResource( 4 )
+anims/open = SubResource( 5 )
