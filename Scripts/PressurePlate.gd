@@ -11,7 +11,8 @@ func _on_Area2D_body_entered(body):
 		interactable_objects.append(body)
 
 		if interactable_objects.size() > 0:
-			get_node(gate_path).open()
+			if gate_path:
+				get_node(gate_path).open()
 			$Sprite.play('down')
 
 func _on_Area2D_body_exited(body):
@@ -24,6 +25,7 @@ func _on_Area2D_body_exited(body):
 		interactable_objects.remove(body_on_plate)
 		
 		if interactable_objects.size() == 0:
-			get_node(gate_path).close()
+			if gate_path:
+				get_node(gate_path).close()
 			$Sprite.play('up')
 			
