@@ -257,7 +257,7 @@ func _input(event):
 		get_tree().reload_current_scene()
 "
 
-[node name="Node2D" type="Node2D"]
+[node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
 merge_count = 5
 next_scene_path = "res://Scenes/Level2.tscn"

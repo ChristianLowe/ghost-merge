@@ -29,7 +29,8 @@ var modulate_default = 'ffffff'
 var modulate_active = 'ffc80a'
 
 func _ready():
-	SoundController.play_bg()
+	if get("name") == "Level1":
+		SoundController.play_bg()
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 
 func merge_player(player, interactable):
