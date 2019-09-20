@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SpikeTraps.wav-2f4a3f32a82ceab4b1c0c6f75ee8b923.sample"
+
+[deps]
+
+source_file="res://Sounds/SpikeTraps.wav"
+dest_files=[ "res://.import/SpikeTraps.wav-2f4a3f32a82ceab4b1c0c6f75ee8b923.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

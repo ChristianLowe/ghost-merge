@@ -4,13 +4,16 @@ onready var root = get_parent()
 var open = false
 
 func _ready():
-	close_door()
+	close_door(true)
 
 func open_door():
+	SoundController.play_effect("res://Sounds/Door.wav", -40)
 	open = true
 	$Sprite.modulate = Color.green
 
-func close_door():
+func close_door(init=false):
+	if not init:
+		SoundController.play_effect("res://Sounds/Door.wav", -40)
 	open = false
 	$Sprite.modulate = Color.red
 

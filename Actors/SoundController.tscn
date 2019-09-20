@@ -8,4 +8,8 @@ script = ExtResource( 1 )
 
 [node name="BGPlayer" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
+volume_db = -20.0
 attenuation = 0.203063
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer2D" parent="."]
+volume_db = -20.0

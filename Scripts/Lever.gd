@@ -8,11 +8,12 @@ func _ready():
 	pass
 
 func interact():
-	print(state)
 	if state == "left":
+		SoundController.play_effect("res://Sounds/Lever.wav", -20)
 		$AnimationPlayer.play('PullLever')
 		state = "right"
 	elif state == "right":
+		SoundController.play_effect("res://Sounds/Lever.wav", -20)
 		$AnimationPlayer.play('PullLeverReverse')
 		state = "left"
 		

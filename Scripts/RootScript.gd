@@ -33,6 +33,7 @@ func _ready():
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 
 func merge_player(player, interactable):
+	SoundController.play_effect("res://Sounds/merge.wav", -40)
 	interacting_object = interactable
 	interacting_object.set_process_input(true)
 	interactable.set_modulate_color(modulate_active)
@@ -72,6 +73,7 @@ func merge_player(player, interactable):
 
 func show_player():
 	if interacting_object != null:
+		SoundController.play_effect("res://Sounds/Merge.wav", -40)
 		var player_instance = player.instance()
 		player_instance.global_position = player_position
 		
