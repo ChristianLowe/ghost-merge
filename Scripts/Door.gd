@@ -7,13 +7,13 @@ func _ready():
 	close_door(true)
 
 func open_door():
-	SoundController.play_effect("res://Sounds/Door.wav", -40)
+	SoundController.play_effect("res://Sounds/Door.wav", -20)
 	open = true
 	$Sprite.modulate = Color.green
 
 func close_door(init=false):
 	if not init:
-		SoundController.play_effect("res://Sounds/Door.wav", -40)
+		SoundController.play_effect("res://Sounds/Door.wav", -20)
 	open = false
 	$Sprite.modulate = Color.red
 

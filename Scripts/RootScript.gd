@@ -85,6 +85,7 @@ func show_player():
 		ghost_trail_instance.global_position = interactable.global_position
 		ghost_trail_instance.target_point = player_position
 		add_child(ghost_trail_instance)
+		yield(ghost_trail_instance, "trail_arrived")
 		
 		add_child(player_instance)
 		player_instance.get_node('KinematicBody2D').play_merge_back_animation(player_position, user_direction)

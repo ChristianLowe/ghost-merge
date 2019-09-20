@@ -23,4 +23,3 @@ margin_right = 20.0
 margin_bottom = 29.0
 color = Color( 0.298039, 0.298039, 0.298039, 0.65098 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
