@@ -6,3 +6,7 @@ func _on_Area2D_body_entered(body):
 	if body.get_parent().get_name() == 'Interactable':
 		SoundController.play_effect("res://Sounds/PressurePlate.wav", -20)
 		get_node(gate_path).open()
+
+func _on_Area2D_body_exited(body):
+	if body.get_parent().get_name() == 'Interactable':
+		get_node(gate_path).close()

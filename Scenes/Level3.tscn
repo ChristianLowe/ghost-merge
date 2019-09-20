@@ -482,7 +482,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 1/z_index = 0
 
-[sub_resource type="GDScript" id=51]
+[sub_resource type="GDScript" id=50]
 script/source = "extends Control
 
 onready var root = get_parent()
@@ -495,7 +495,7 @@ func _input(event):
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 merge_count = 3
-next_scene_path = "res://Scenes/Level3.tscn"
+next_scene_path = "res://Scenes/Level4.tscn"
 
 [node name="Tilemap" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
@@ -518,6 +518,7 @@ position = Vector2( 175.087, 48.1673 )
 position = Vector2( 144.948, 303.98 )
 
 [node name="Interactable" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
 
 [node name="Lever" parent="Interactable" instance=ExtResource( 6 )]
 position = Vector2( 49.0704, 365.87 )
@@ -549,4 +550,4 @@ position = Vector2( 208.368, 376.996 )
 [node name="ResetButton" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
 margin_bottom = 40.0
-script = SubResource( 51 )
+script = SubResource( 50 )

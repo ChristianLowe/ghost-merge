@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/RootScript.gd" type="Script" id=1]
+[ext_resource path="res://Tilemaps/Tilesets/DungeonTileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Actors/Barrel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/MergeCountLabel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Actors/PressurePlate.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Actors/Gate.tscn" type="PackedScene" id=12]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+onready var root = get_parent()
+
+func _input(event):
+	if event.is_action_pressed('reset'):
+		get_tree().reload_current_scene()
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+merge_count = 5
+next_scene_path = "res://Scenes/Level1.tscn"
+
+[node name="Tilemap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 5, 3, 0, 5, 4, 0, 4, 5, 0, 2, 6, 0, 2, 7, 0, 1, 8, 0, 6, 65536, 0, 65536, 65537, 0, 327685, 65538, 1, 1, 65539, 0, 131073, 65540, 0, 131074, 65541, 0, 196610, 65542, 0, 196613, 65543, 0, 327683, 65544, 0, 131078, 131072, 0, 131072, 131073, 0, 196609, 131074, 0, 196612, 131075, 0, 196613, 131076, 0, 262145, 131077, 0, 131077, 131078, 0, 262145, 131079, 0, 131077, 131080, 0, 262150, 196608, 0, 131072, 196609, 0, 262147, 196610, 0, 131077, 196611, 0, 262147, 196612, 0, 262145, 196613, 0, 327685, 196614, 0, 131076, 196615, 0, 327684, 196616, 0, 131078, 262144, 0, 327680, 262145, 0, 196610, 262146, 0, 131075, 262147, 0, 65538, 262148, 1, 1, 262149, 0, 131074, 262150, 0, 131077, 262151, 0, 65538, 262152, 0, 327686, 327680, 0, 262144, 327681, 1, 1, 327682, 0, 262147, 327683, 0, 131076, 327684, 0, 196613, 327685, 0, 65541, 327686, 0, 327685, 327687, 0, 327683, 327688, 0, 327686, 393216, 0, 262144, 393217, 0, 131077, 393218, 0, 131075, 393219, 1, 1, 393220, 0, 196609, 393221, 0, 262148, 393222, 0, 65538, 393223, 0, 131077, 393224, 0, 65542, 458752, 0, 131072, 458753, 0, 262147, 458754, 0, 327685, 458755, 0, 327684, 458756, 0, 65538, 458757, 0, 196609, 458758, 0, 262147, 458759, 0, 65539, 458760, 0, 65542, 524288, 0, 131072, 524289, 0, 65539, 524290, 0, 196612, 524291, 0, 262147, 524292, 1, 393217, 524293, 1, 393217, 524294, 1, 393217, 524295, 1, 393217, 524296, 0, 131078, 589824, 0, 65536, 589825, 0, 327682, 589826, 0, 131075, 589827, 0, 327681, 589828, 0, 131076, 589829, 0, 65540, 589830, 0, 327684, 589831, 0, 131077, 589832, 0, 65542, 655360, 0, 131072, 655361, 0, 196609, 655362, 0, 65539, 655363, 0, 262148, 655364, 1, 393217, 655365, 1, 393217, 655366, 0, 131077, 655367, 0, 131074, 655368, 0, 131078, 720896, 0, 262144, 720897, 0, 262147, 720898, 0, 262147, 720899, 0, 327681, 720900, 1, 131072, 720901, 0, 196612, 720902, 0, 196613, 720903, 0, 131075, 720904, 0, 262150, 786432, 0, 393216, 786433, 0, 393221, 786434, 0, 393220, 786435, 0, 393217, 786436, 0, 393220, 786437, 0, 393221, 786438, 0, 393221, 786439, 0, 393219, 786440, 0, 393222 )
+
+[node name="Interactable" parent="." instance=ExtResource( 3 )]
+
+[node name="Lever" parent="Interactable" instance=ExtResource( 4 )]
+position = Vector2( 240.716, 367.536 )
+
+[node name="Barrel" parent="Interactable" instance=ExtResource( 5 )]
+position = Vector2( 230, 110 )
+
+[node name="Barrel2" parent="Interactable" instance=ExtResource( 5 )]
+position = Vector2( 51.7638, 368.963 )
+
+[node name="Door" parent="." instance=ExtResource( 6 )]
+position = Vector2( 145.754, 31.723 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 143.198, 162.793 )
+current = true
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 110, 379.143 )
+
+[node name="Control" parent="." instance=ExtResource( 8 )]
+
+[node name="Control2" parent="." instance=ExtResource( 9 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="MergeCountLabel" parent="CanvasLayer" instance=ExtResource( 10 )]
+
+[node name="ResetButton" type="Control" parent="CanvasLayer"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = SubResource( 1 )
+
+[node name="PressurePlate" parent="." instance=ExtResource( 11 )]
+position = Vector2( 80.6528, 133.804 )
+scale = Vector2( 0.75, 1 )
+gate_path = NodePath("../Gate")
+
+[node name="Gate" parent="." instance=ExtResource( 12 )]
+position = Vector2( 144.519, 303.793 )
