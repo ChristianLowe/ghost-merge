@@ -76,6 +76,10 @@ func show_player():
 	if interacting_object != null:
 		SoundController.play_effect("res://Sounds/Merge.wav", -40)
 		var player_instance = player.instance()
+		
+		# There is a slight northern increase. this is a janky but accurate fix
+		player_position = Vector2(player_position.x, player_position.y + 20)
+		
 		player_instance.global_position = player_position
 		
 		var interactable = interacting_object
@@ -85,6 +89,7 @@ func show_player():
 		var ghost_trail_instance = ghost_trail.instance()
 		ghost_trail_instance.global_position = interactable.global_position
 		ghost_trail_instance.target_point = player_position
+		
 		add_child(ghost_trail_instance)		
 		interacting_object.set_process_input(false)
 		yield(ghost_trail_instance, "trail_arrived")
