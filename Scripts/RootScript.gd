@@ -27,6 +27,7 @@ var merge_orb_instance = null
 var user_direction = null
 var modulate_default = 'ffffff'
 var modulate_active = 'ffc80a'
+var showing_player = true
 
 func _ready():
 	if get("name") == "Level1":
@@ -72,8 +73,11 @@ func merge_player(player, interactable):
 	
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 
+	showing_player = false
+
 func show_player():
 	if interacting_object != null:
+		showing_player = true
 		SoundController.play_effect("res://Sounds/Merge.wav", -40)
 		var player_instance = player.instance()
 		
@@ -103,6 +107,8 @@ func show_player():
 		
 		player_position = null
 		interacting_object = null
+		
+		showing_player = false
 
 func can_player_merge():
 	return merge_count > 0

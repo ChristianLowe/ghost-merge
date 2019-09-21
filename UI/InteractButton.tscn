@@ -6,7 +6,7 @@ script/source = "extends Control
 onready var root = get_parent()
 
 func _input(event):
-	if event.is_action_pressed('interact') and root.interacting_object != null:
+	if event.is_action_pressed('interact') and root.interacting_object != null and root.interacting_object.has_method('interact'):
 		root.interacting_object.interact()
 "
 
