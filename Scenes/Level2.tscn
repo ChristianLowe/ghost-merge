@@ -509,7 +509,6 @@ position = Vector2( 50, 210 )
 gate_path = NodePath("../Gate")
 
 [node name="Interactable" parent="." instance=ExtResource( 5 )]
-editor/display_folded = true
 
 [node name="Lever" parent="Interactable" instance=ExtResource( 6 )]
 position = Vector2( 222.479, 50.2211 )

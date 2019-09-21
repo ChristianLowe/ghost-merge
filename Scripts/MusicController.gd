@@ -4,7 +4,12 @@ onready var _effects_player = $SoundEffectPlayer
 onready var _bg_player = $BGPlayer
 onready var default = -20
 
-func play_bg():
+func play_bg(track_url, volume):
+	var track = load(track_url)
+	if not volume:
+		volume = -20
+	_bg_player.volume_db = volume
+	_bg_player.stream = track
 	_bg_player.play()
 	
 func stop_bg():
