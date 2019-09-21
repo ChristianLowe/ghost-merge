@@ -9,10 +9,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.3843, 0.930176 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 6.08158, 16.1696 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16.3843, 14.8817 )
 
 [node name="Door" type="Node2D"]
@@ -25,19 +25,23 @@ texture = ExtResource( 2 )
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShapeHorizontalDoor" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -0.21463, 0.429279 )
+position = Vector2( 1.3411e-007, 2.57567 )
+shape = SubResource( 1 )
+
+[node name="CollisionShapeHorizontalDoorTop" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 0.184029, -28.8929 )
 shape = SubResource( 1 )
 
 [node name="CollisionShapeVerticalDoor" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -21.6786, 16.7419 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 disabled = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShapeHorizontalDoor" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.214645, -13.093 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="HorizontalDoor" type="Sprite" parent="."]
 position = Vector2( 0.128784, -12.653 )
