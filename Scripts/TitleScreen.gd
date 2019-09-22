@@ -4,13 +4,16 @@ var scene_path_to_load
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if not SoundController.init_play:
+		SoundController.play_bg("res://Sounds/NightInTheCastleKevinMacleod.ogg", -20)
+		SoundController.init_play = true
 	$Menu/CenterRow/Buttons/NewGameButton.grab_focus()
 	for button in $Menu/CenterRow/Buttons.get_children():
 		button.connect('pressed', self, '_on_Button_pressed', [button.scene_to_load])
 	pass # Replace with function body.
 
 func _on_Button_pressed(scene_to_load):
-	#$ShotgunSound.play()
+	SoundController.play_effect("res://Sounds/whoosh.wav", -20)
 	scene_path_to_load = scene_to_load
 	$FadeIn.show()
 	$FadeIn.fade_in()

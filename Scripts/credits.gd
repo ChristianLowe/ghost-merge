@@ -9,6 +9,7 @@ func _on_FadeIn_fade_finished():
 		get_tree().change_scene(scene_path_to_load)
 
 func _on_LeftButton_pressed():
+	SoundController.play_effect("res://Sounds/whoosh.wav", -20)
 	var button = $"Tutorial Area/LeftButton"
 	scene_path_to_load = button.scene_to_load
 	$FadeIn.show()

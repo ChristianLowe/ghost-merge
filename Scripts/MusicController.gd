@@ -3,6 +3,7 @@ extends Node
 onready var _effects_player = $SoundEffectPlayer
 onready var _bg_player = $BGPlayer
 onready var default = -20
+var init_play = false
 
 func play_bg(track_url, volume):
 	var track = load(track_url)
