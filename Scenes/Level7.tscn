@@ -25,8 +25,8 @@ func _input(event):
 
 [node name="Level7" type="Node2D"]
 script = ExtResource( 1 )
-merge_count = 10
-next_scene_path = "res://Scenes/Level1.tscn"
+merge_count = 3
+next_scene_path = "res://Scenes/Level8.tscn"
 
 [node name="Tilemap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
