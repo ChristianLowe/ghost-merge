@@ -13,13 +13,38 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureButton
 
+func _ready():
+	SignalBus.connect('merge', self, '_merge')
+	_unmerge()
+
+func _merge():
+	visible = true
+	disabled = false
+	
+func _unmerge():
+	visible = false
+	disabled = true
+
 func _pressed():
-	get_tree().set_input_as_handled()
+	_unmerge()
 	SignalBus.emit('unmerge')
 "
 
 [sub_resource type="GDScript" id=2]
 script/source = "extends TextureButton
+
+func _ready():
+	SignalBus.connect('merge', self, '_merge')
+	SignalBus.connect('unmerge', self, '_unmerge')
+	_unmerge()
+	
+func _merge():
+	disabled = false
+	visible = true
+	
+func _unmerge():
+	disabled = true
+	visible = false
 
 func _pressed():
 	SignalBus.emit('interact')

@@ -36,6 +36,7 @@ func _ready():
 	SignalBus.connect('unmerge', self, '_unmerge')
 
 func merge_player(player, interactable):
+	SignalBus.emit('merge')
 	SoundController.play_effect("res://Sounds/merge.wav", -40)
 	interacting_object = interactable
 	interacting_object.set_process_unhandled_input(true)

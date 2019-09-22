@@ -6,6 +6,7 @@ script/source = "extends Node2D
 signal message
 signal interact
 signal unmerge
+signal merge
 signal reset
 
 func emit(signal_name):
