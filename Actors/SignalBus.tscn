@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+signal message
+signal interact
+signal unmerge
+signal reset
+
+func emit(signal_name):
+	emit_signal(signal_name)
+
+func emit_with_args(signal_name, args):
+	emit_signal(signal_name, args)
+"
+
+[node name="SignalBus" type="Node2D"]
+script = SubResource( 1 )

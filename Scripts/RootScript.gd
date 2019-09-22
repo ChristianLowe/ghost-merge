@@ -33,6 +33,9 @@ func _ready():
 	if get("name") == "Level1":
 		SoundController.play_bg("res://Sounds/NightInTheCastleKevinMacleod.ogg", -20)
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
+	
+	SignalBus.connect('interact', self, '_interact')
+	SignalBus.connect('unmerge', self, '_unmerge')
 
 func merge_player(player, interactable):
 	SoundController.play_effect("res://Sounds/merge.wav", -40)
@@ -116,4 +119,10 @@ func can_player_merge():
 func change_scene():	
 	get_tree().change_scene(next_scene_path)
 
+func _interact():
+	if interacting_object != null and interacting_object.has_method('interact'):
+		interacting_object.interact()
 
+func _unmerge():
+	if not showing_player:
+		show_player()

@@ -1,13 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="GDScript" id=1]
-script/source = "extends Control
+script/source = "extends TextureButton
 
-onready var root = get_parent().get_parent()
-
-func _input(event):
-	if event.is_action_pressed('interact') and root.interacting_object != null and root.interacting_object.has_method('interact'):
-		root.interacting_object.interact()
+func _pressed():
+	SignalBus.emit('interact')
 "
 
 [node name="InteractButton" type="TextureButton"]

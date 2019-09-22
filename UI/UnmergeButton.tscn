@@ -1,13 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="GDScript" id=1]
-script/source = "extends Control
+script/source = "extends TextureButton
 
-onready var root = get_parent()
-
-func _input(event):
-	if event.is_action_pressed('unmerge') and not root.showing_player:
-		root.show_player()
+func _pressed():
+	SignalBus.emit('unmerge')
 "
 
 [node name="UnmergeButton" type="TextureButton"]

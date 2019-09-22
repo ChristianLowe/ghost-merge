@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SoundController="*res://Actors/SoundController.tscn"
+SignalBus="*res://Actors/SignalBus.tscn"
 
 [display]
 
