@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dollar-sign.png-221044f2d84876ebe5a8ab710d66870b.stex"
+path="res://.import/left-arrow.png-7eeca77150acf94dfeb796a9c0afd4bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://FlavorAssets/dollar-sign.png"
-dest_files=[ "res://.import/dollar-sign.png-221044f2d84876ebe5a8ab710d66870b.stex" ]
+source_file="res://TileSets/DungeonTileSets/left-arrow.png"
+dest_files=[ "res://.import/left-arrow.png-7eeca77150acf94dfeb796a9c0afd4bd.stex" ]
 
 [params]
 
