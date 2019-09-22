@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/NightInTheCastleKevinMacleod.ogg-94428dfbc0a449f0d00a8571b339a71c.oggstr"
+
+[deps]
+
+source_file="res://Sounds/NightInTheCastleKevinMacleod.ogg"
+dest_files=[ "res://.import/NightInTheCastleKevinMacleod.ogg-94428dfbc0a449f0d00a8571b339a71c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

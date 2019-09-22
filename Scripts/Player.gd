@@ -10,7 +10,6 @@ var velocity = Vector2.ZERO
 var merged: Node2D = null
 var interactable: Node2D = null
 
-
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
 

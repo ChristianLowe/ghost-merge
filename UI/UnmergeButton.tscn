@@ -6,7 +6,7 @@ script/source = "extends Control
 onready var root = get_parent()
 
 func _input(event):
-	if event.is_action_pressed('unmerge'):
+	if event.is_action_pressed('unmerge') and not root.showing_player:
 		root.show_player()
 "
 

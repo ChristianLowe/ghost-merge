@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EpicMetalInstrumentalChillOutRecords.ogg-46f0c843b55562b5fd87f72e988d626a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/EpicMetalInstrumentalChillOutRecords.ogg"
+dest_files=[ "res://.import/EpicMetalInstrumentalChillOutRecords.ogg-46f0c843b55562b5fd87f72e988d626a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
