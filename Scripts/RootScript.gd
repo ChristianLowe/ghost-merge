@@ -30,7 +30,7 @@ var modulate_active = 'ffc80a'
 var showing_player = true
 
 func _ready():
-	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
+	$MergeCountLabel.get_node('Label').update_merge_count(merge_count)
 	
 	SignalBus.connect('interact', self, '_interact')
 	SignalBus.connect('unmerge', self, '_unmerge')
@@ -73,7 +73,9 @@ func merge_player(player, interactable):
 	
 	merge_count -= 1
 	
-	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
+	
+	$MergeCountLabel.get_node('Label').update_merge_count(merge_count)
+	$MergeCountLabel.get_node('Sprite').animate_in()
 
 	showing_player = false
 
