@@ -13,7 +13,7 @@ var interactable: Node2D = null
 func _ready():
 	root.get_node('Interactable').connect('clicked', self, 'attempt_merge')
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		target = get_global_mouse_position()
 		

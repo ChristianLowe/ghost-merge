@@ -14,6 +14,7 @@
 script/source = "extends TextureButton
 
 func _pressed():
+	get_tree().set_input_as_handled()
 	SignalBus.emit('unmerge')
 "
 
@@ -31,7 +32,6 @@ func _ready():
 	self.connect('pressed', self, '_on_ResetButton_pressed')
 
 func _on_ResetButton_pressed():
-	print('hi')
 	get_tree().reload_current_scene()
 "
 
@@ -41,6 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -200.0
 rect_min_size = Vector2( 1280, 720 )
+mouse_filter = 2
 custom_constants/margin_right = 120
 custom_constants/margin_top = 80
 custom_constants/margin_left = 120

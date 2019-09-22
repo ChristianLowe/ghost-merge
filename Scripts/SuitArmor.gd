@@ -7,10 +7,10 @@ onready var direction = ''
 export var speed: int = 100
 
 func _ready():
-	set_process_input(false)
+	set_process_unhandled_input(false)
 	$Sprite.playing = false
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		target = get_global_mouse_position()
 

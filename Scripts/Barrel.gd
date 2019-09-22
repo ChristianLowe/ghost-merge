@@ -6,9 +6,9 @@ onready var target
 export var speed: int = 200
 
 func _ready():
-	set_process_input(false)
+	set_process_unhandled_input(false)
 
-func _input(event):
+func _unhandled_input(event):
 	if event is InputEventMouseButton and event.is_pressed():
 		if velocity != Vector2(0,0):
 			return

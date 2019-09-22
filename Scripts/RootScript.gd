@@ -38,7 +38,7 @@ func _ready():
 func merge_player(player, interactable):
 	SoundController.play_effect("res://Sounds/merge.wav", -40)
 	interacting_object = interactable
-	interacting_object.set_process_input(true)
+	interacting_object.set_process_unhandled_input(true)
 	interactable.set_modulate_color(modulate_active)
 	if interacting_object.get_node('Sprite').is_class('AnimatedSprite'):
 		interacting_object.get_node('Sprite').playing = true
@@ -96,7 +96,7 @@ func show_player():
 		ghost_trail_instance.target_point = player_position
 		
 		add_child(ghost_trail_instance)		
-		interacting_object.set_process_input(false)
+		interacting_object.set_process_unhandled_input(false)
 		yield(ghost_trail_instance, "trail_arrived")
 		
 		add_child(player_instance)
