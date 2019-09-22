@@ -30,8 +30,6 @@ var modulate_active = 'ffc80a'
 var showing_player = true
 
 func _ready():
-	if get("name") == "Level1":
-		SoundController.play_bg("res://Sounds/NightInTheCastleKevinMacleod.ogg", -20)
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
 	
 	SignalBus.connect('interact', self, '_interact')
