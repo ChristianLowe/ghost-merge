@@ -26,12 +26,10 @@ func _on_Area2D_body_entered(body):
 		
 func _flip_door():
 	open = not open
-	$VerticalDoor.visible = not $VerticalDoor.visible
-	$StaticBody2D/CollisionShapeVerticalDoor.disabled = not $StaticBody2D/CollisionShapeVerticalDoor.disabled
 	
-	$HorizontalDoor.visible = not $HorizontalDoor.visible
-	$Area2D/CollisionShapeHorizontalDoor.visible = not $Area2D/CollisionShapeHorizontalDoor.visible
-	$StaticBody2D/CollisionShapeHorizontalDoor.disabled = not $StaticBody2D/CollisionShapeHorizontalDoor.disabled
-	$StaticBody2D/CollisionShapeHorizontalDoorTop.disabled = not $StaticBody2D/CollisionShapeHorizontalDoorTop.disabled
-
+	$DoorClosed.visible = not $DoorClosed.visible
+	$DoorOpened.visible = not $DoorOpened.visible
 	
+	$StaticBody2D/CollisionShapeBottom.disabled = not $StaticBody2D/CollisionShapeBottom.disabled
+	$StaticBody2D/CollisionShapeTop.disabled = not $StaticBody2D/CollisionShapeTop.disabled
+	$StaticBody2D/CollisionShapeOpen.disabled = not $StaticBody2D/CollisionShapeOpen.disabled
