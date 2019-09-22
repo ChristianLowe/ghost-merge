@@ -486,6 +486,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 merge_count = 3
+level_count = 3
 next_scene_path = "res://Scenes/Level4.tscn"
 
 [node name="MergeCountLabel" parent="." instance=ExtResource( 2 )]

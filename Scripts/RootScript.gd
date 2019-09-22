@@ -13,6 +13,7 @@ onready var hat_cane_left_texture = load("res://Sprites/Ghost/hat-cane-left.png"
 onready var hat_cane_texture = load("res://Sprites/Ghost/hat-cane.png")
 
 export var merge_count: int = 2
+export var level_count: int = 1
 
 export (String, FILE, '*tscn') var next_scene_path
 
@@ -30,7 +31,7 @@ var modulate_active = 'ffc80a'
 var showing_player = true
 
 func _ready():
-	$MergeCountLabel.get_node('Label').update_merge_count(merge_count)
+	$MergeCountLabel.get_node('Label').update_merge_count(merge_count, level_count)
 	
 	SignalBus.connect('interact', self, '_interact')
 	SignalBus.connect('unmerge', self, '_unmerge')
@@ -74,7 +75,7 @@ func merge_player(player, interactable):
 	merge_count -= 1
 	
 	
-	$MergeCountLabel.get_node('Label').update_merge_count(merge_count)
+	$MergeCountLabel.get_node('Label').update_merge_count(merge_count, level_count)
 	$MergeCountLabel.get_node('Sprite').animate_in()
 
 	showing_player = false

@@ -18,6 +18,7 @@
 [node name="Level6" type="Node2D"]
 script = ExtResource( 1 )
 merge_count = 4
+level_count = 6
 next_scene_path = "res://Scenes/Level7.tscn"
 
 [node name="MergeCountLabel" parent="." instance=ExtResource( 2 )]
