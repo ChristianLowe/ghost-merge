@@ -3,14 +3,14 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
-onready var root = get_parent()
+onready var root = get_parent().get_parent()
 
 func _input(event):
 	if event.is_action_pressed('interact') and root.interacting_object != null and root.interacting_object.has_method('interact'):
 		root.interacting_object.interact()
 "
 
-[node name="InteractButton" type="Control"]
+[node name="InteractButton" type="TextureButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = SubResource( 1 )

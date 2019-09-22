@@ -12,16 +12,7 @@
 [ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=10]
 [ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/MergeCountLabel.tscn" type="PackedScene" id=12]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Control
-
-onready var root = get_parent()
-
-func _input(event):
-	if event.is_action_pressed('reset'):
-		get_tree().reload_current_scene()
-"
+[ext_resource path="res://UI/UIContainer.tscn" type="PackedScene" id=13]
 
 [node name="Level7" type="Node2D"]
 script = ExtResource( 1 )
@@ -82,7 +73,4 @@ position = Vector2( 179, 384 )
 
 [node name="MergeCountLabel" parent="CanvasLayer" instance=ExtResource( 12 )]
 
-[node name="ResetButton" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = SubResource( 1 )
+[node name="UIContainer" parent="CanvasLayer" instance=ExtResource( 13 )]
