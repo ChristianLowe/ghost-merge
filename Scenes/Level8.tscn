@@ -13,16 +13,7 @@
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=12]
 [ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=13]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Control
-
-onready var root = get_parent()
-
-func _input(event):
-	if event.is_action_pressed('reset'):
-		get_tree().reload_current_scene()
-"
+[ext_resource path="res://UI/UIContainer.tscn" type="PackedScene" id=14]
 
 [node name="Level8" type="Node2D"]
 script = ExtResource( 1 )
@@ -89,7 +80,4 @@ position = Vector2( 244, 388 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ResetButton" type="Control" parent="CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = SubResource( 1 )
+[node name="UIContainer" parent="CanvasLayer" instance=ExtResource( 14 )]
