@@ -109,7 +109,7 @@ size_flags_vertical = 3
 
 [node name="David" type="Label" parent="Tutorial Area/CenterBox/Name"]
 margin_right = 468.0
-margin_bottom = 52.0
+margin_bottom = 45.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
@@ -117,9 +117,9 @@ text = "Urodela"
 valign = 1
 
 [node name="Chris" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 56.0
+margin_top = 49.0
 margin_right = 468.0
-margin_bottom = 108.0
+margin_bottom = 94.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 4 )
@@ -127,9 +127,9 @@ text = "Grognak"
 valign = 1
 
 [node name="Edgar" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 112.0
+margin_top = 98.0
 margin_right = 468.0
-margin_bottom = 164.0
+margin_bottom = 143.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 5 )
@@ -137,19 +137,29 @@ text = "Deaths_head"
 valign = 1
 
 [node name="Tyler" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 168.0
+margin_top = 147.0
 margin_right = 468.0
-margin_bottom = 220.0
+margin_bottom = 192.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
 text = "imgoinghamm"
 valign = 1
 
-[node name="BGMusic" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 224.0
+[node name="Skeleton" type="Label" parent="Tutorial Area/CenterBox/Name"]
+margin_top = 196.0
 margin_right = 468.0
-margin_bottom = 276.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+text = "Skeleton Image"
+valign = 1
+
+[node name="BGMusic" type="Label" parent="Tutorial Area/CenterBox/Name"]
+margin_top = 245.0
+margin_right = 468.0
+margin_bottom = 290.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
@@ -157,9 +167,9 @@ text = "Background Music"
 valign = 1
 
 [node name="BGMusic2" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 280.0
+margin_top = 294.0
 margin_right = 468.0
-margin_bottom = 332.0
+margin_bottom = 339.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 6 )
@@ -167,7 +177,7 @@ text = "Background Music"
 valign = 1
 
 [node name="BGMusic3" type="Label" parent="Tutorial Area/CenterBox/Name"]
-margin_top = 336.0
+margin_top = 343.0
 margin_right = 468.0
 margin_bottom = 390.0
 size_flags_horizontal = 3
@@ -185,7 +195,7 @@ size_flags_vertical = 3
 
 [node name="Label" type="Label" parent="Tutorial Area/CenterBox/URLS"]
 margin_right = 508.0
-margin_bottom = 52.0
+margin_bottom = 45.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 7 )
@@ -193,9 +203,9 @@ text = "https://github.com/dalisaydavid"
 valign = 1
 
 [node name="Label2" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 56.0
+margin_top = 49.0
 margin_right = 508.0
-margin_bottom = 108.0
+margin_bottom = 94.0
 rect_pivot_offset = Vector2( 107.708, 40.5 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -204,9 +214,9 @@ text = "https://github.com/ChristianLowe"
 valign = 1
 
 [node name="Label3" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 112.0
+margin_top = 98.0
 margin_right = 508.0
-margin_bottom = 164.0
+margin_bottom = 143.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 9 )
@@ -214,19 +224,29 @@ text = "https://github.com/Edj209"
 valign = 1
 
 [node name="Label4" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 168.0
+margin_top = 147.0
 margin_right = 508.0
-margin_bottom = 220.0
+margin_bottom = 192.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
 text = "https://github.com/TylerHamm"
 valign = 1
 
-[node name="Label5" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 224.0
+[node name="Label8" type="Label" parent="Tutorial Area/CenterBox/URLS"]
+margin_top = 196.0
 margin_right = 508.0
-margin_bottom = 276.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 10 )
+text = "https://jesse-m.itch.io/skeleton-pack"
+valign = 1
+
+[node name="Label5" type="Label" parent="Tutorial Area/CenterBox/URLS"]
+margin_top = 245.0
+margin_right = 508.0
+margin_bottom = 290.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
@@ -234,9 +254,9 @@ text = "Youtube: Kevin Macleod"
 valign = 1
 
 [node name="Label6" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 280.0
+margin_top = 294.0
 margin_right = 508.0
-margin_bottom = 332.0
+margin_bottom = 339.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 10 )
@@ -244,7 +264,7 @@ text = "Youtube: Ross Bugden  - Music"
 valign = 1
 
 [node name="Label7" type="Label" parent="Tutorial Area/CenterBox/URLS"]
-margin_top = 336.0
+margin_top = 343.0
 margin_right = 508.0
 margin_bottom = 390.0
 size_flags_horizontal = 3

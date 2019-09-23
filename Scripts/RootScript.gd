@@ -39,7 +39,6 @@ func _ready():
 	
 	var t = transition.instance()
 	t.get_node('AnimationPlayer').play('fade_in')
-	t.get_node('AnimationPlayer').seek(0.1)
 	$CanvasLayer.add_child(t)
 	
 	SignalBus.connect('interact', self, '_interact')
@@ -135,6 +134,9 @@ func change_scene():
 		t.get_node('AnimationPlayer').play('fade_out')
 		t.get_node('AnimationPlayer').connect('animation_finished', self, '_change_scene')
 		$CanvasLayer.add_child(t)
+
+func flash():
+	$CanvasLayer.get_node('FlashRect').flash()
 
 func _change_scene(unused):
 	print('sup')
