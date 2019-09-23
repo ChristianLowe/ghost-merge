@@ -1,17 +1,17 @@
 [gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://Scripts/RootScript.gd" type="Script" id=1]
-[ext_resource path="res://TileSets/DungeonTileSets/tileset guide/images/image12.png" type="Texture" id=2]
-[ext_resource path="res://Actors/Gate.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Actors/PressurePlate.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Actors/SuitArmor.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=10]
-[ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=11]
-[ext_resource path="res://UI/MergeCountLabel.tscn" type="PackedScene" id=12]
+[ext_resource path="res://UI/MergeLabel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileSets/DungeonTileSets/tileset guide/images/image12.png" type="Texture" id=3]
+[ext_resource path="res://Actors/Gate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Actors/PressurePlate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Actors/SuitArmor.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=12]
 [ext_resource path="res://UI/UIContainer.tscn" type="PackedScene" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -160,7 +160,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=49]
 0/name = "Autotile0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 224, 224 )
@@ -323,7 +323,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 1/name = "DungeonAtlas"
-1/texture = ExtResource( 2 )
+1/texture = ExtResource( 3 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 224, 224 )
@@ -485,7 +485,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
+level_count = 2
 next_scene_path = "res://Scenes/Level3.tscn"
+
+[node name="MergeCountLabel" parent="." instance=ExtResource( 2 )]
 
 [node name="Tilemap" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
@@ -495,36 +498,34 @@ collision_mask = 3
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 5, 3, 1, 393219, 4, 1, 196610, 5, 1, 4, 6, 0, 2, 7, 0, 1, 8, 0, 6, 65536, 0, 327680, 65537, 0, 131073, 65538, 0, 131074, 65539, 1, 131073, 65540, 1, 262145, 65541, 1, 196610, 65542, 0, 196613, 65543, 0, 327683, 65544, 0, 131078, 131072, 0, 65536, 131073, 0, 65538, 131074, 0, 327683, 131075, 0, 196613, 131076, 0, 262145, 131077, 0, 131077, 131078, 0, 262145, 131079, 0, 131077, 131080, 0, 262150, 196608, 0, 65536, 196609, 0, 65538, 196610, 0, 262147, 196611, 0, 262146, 196612, 0, 262147, 196613, 0, 327685, 196614, 0, 131076, 196615, 0, 327684, 196616, 0, 131078, 262144, 0, 131072, 262145, 0, 196610, 262146, 0, 196610, 262147, 0, 196613, 262148, 0, 131074, 262149, 0, 131074, 262150, 0, 131077, 262151, 0, 65538, 262152, 0, 327686, 327680, 0, 262144, 327681, 1, 393217, 327682, 1, 393217, 327683, 1, 393217, 327684, 0, 262148, 327685, 1, 393217, 327686, 1, 393217, 327687, 1, 393217, 327688, 0, 327686, 393216, 0, 262144, 393217, 0, 131077, 393218, 0, 131075, 393219, 0, 327685, 393220, 0, 131077, 393221, 0, 196610, 393222, 0, 327684, 393223, 0, 131073, 393224, 0, 131078, 458752, 0, 131072, 458753, 0, 262147, 458754, 0, 327685, 458755, 0, 327684, 458756, 0, 131073, 458757, 0, 262145, 458758, 0, 262145, 458759, 0, 196611, 458760, 0, 327686, 524288, 0, 131072, 524289, 0, 65539, 524290, 0, 196612, 524291, 0, 262147, 524292, 0, 65537, 524293, 0, 65538, 524294, 0, 327684, 524295, 0, 65538, 524296, 0, 262150, 589824, 0, 65536, 589825, 0, 262149, 589826, 0, 131076, 589827, 0, 327683, 589828, 0, 262147, 589829, 0, 131077, 589830, 0, 196612, 589831, 0, 131077, 589832, 0, 65542, 655360, 0, 131072, 655361, 0, 131073, 655362, 0, 196609, 655363, 0, 131073, 655364, 0, 131077, 655365, 0, 262146, 655366, 0, 131073, 655367, 0, 131074, 655368, 0, 131078, 720896, 0, 262144, 720897, 0, 65538, 720898, 0, 327681, 720899, 0, 262148, 720900, 0, 262149, 720901, 0, 196610, 720902, 0, 262145, 720903, 0, 131075, 720904, 0, 262150, 786432, 0, 393216, 786433, 0, 393221, 786434, 0, 393220, 786435, 0, 393217, 786436, 0, 393220, 786437, 0, 393221, 786438, 0, 393221, 786439, 0, 393219, 786440, 0, 393222 )
 
-[node name="Gate" parent="." instance=ExtResource( 3 )]
+[node name="Gate" parent="." instance=ExtResource( 4 )]
 
-[node name="PressurePlate" parent="." instance=ExtResource( 4 )]
+[node name="PressurePlate" parent="." instance=ExtResource( 5 )]
 position = Vector2( 50, 210 )
 gate_path = NodePath("../Gate")
 
-[node name="Interactable" parent="." instance=ExtResource( 5 )]
+[node name="Interactable" parent="." instance=ExtResource( 6 )]
 
-[node name="Lever" parent="Interactable" instance=ExtResource( 6 )]
+[node name="Lever" parent="Interactable" instance=ExtResource( 7 )]
 position = Vector2( 222.479, 50.2211 )
 
-[node name="SuitArmor" parent="Interactable" instance=ExtResource( 7 )]
+[node name="SuitArmor" parent="Interactable" instance=ExtResource( 8 )]
 position = Vector2( 238.325, 362.904 )
 
-[node name="Door" parent="." instance=ExtResource( 8 )]
+[node name="Door" parent="." instance=ExtResource( 9 )]
 position = Vector2( 145.754, 31.723 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 143.198, 162.793 )
 current = true
 
-[node name="Player" parent="." instance=ExtResource( 9 )]
+[node name="Player" parent="." instance=ExtResource( 10 )]
 position = Vector2( 135.594, 291.725 )
 
-[node name="Control" parent="." instance=ExtResource( 10 )]
+[node name="Control" parent="." instance=ExtResource( 11 )]
 
-[node name="Control2" parent="." instance=ExtResource( 11 )]
+[node name="Control2" parent="." instance=ExtResource( 12 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MergeCountLabel" parent="CanvasLayer" instance=ExtResource( 12 )]
 
 [node name="UIContainer" parent="CanvasLayer" instance=ExtResource( 13 )]

@@ -63,11 +63,14 @@ func play_merge_back_animation(target, dir):
 		$Sprite.play(direction + '_remerge')
 
 func attempt_merge(interactable):
-	if interactable in $InteractableArea.in_range and root.can_player_merge():
-		self.interactable = interactable
-		speed = 0
-		play_merge_animation(interactable.global_position)
-		
+	if interactable in $InteractableArea.in_range:
+		if root.can_player_merge():
+			self.interactable = interactable
+			speed = 0
+			play_merge_animation(interactable.global_position)
+		else:
+			SoundController.play_effect("res://Sounds/OutOfMerges.wav", -20)
+
 func _on_Sprite_animation_finished():
 	if 'merge' in $Sprite.animation:
 		if 'remerge' in $Sprite.animation:
