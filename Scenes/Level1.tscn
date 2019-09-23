@@ -76,6 +76,7 @@ next_scene_path = "res://Scenes/Level2.tscn"
 [node name="UIContainer" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="SecretTileMap" type="TileMap" parent="."]
+visible = false
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 3
@@ -114,21 +115,25 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 5, 3, 536870913, 5, 4, 1, 1966
 [node name="Interactable" parent="." instance=ExtResource( 7 )]
 
 [node name="ChestNight" parent="Interactable" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 340, 46.6189 )
 rotation = 4.71239
 sound_url = "res://Sounds/NightInTheCastleKevinMacleod.ogg"
 
 [node name="ChestMetal" parent="Interactable" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 340, 80 )
 rotation = 4.71239
 sound_url = "res://Sounds/EpicMetalInstrumentalChillOutRecords.ogg"
 
 [node name="ChestVideo" parent="Interactable" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 340, 113 )
 rotation = 4.71239
 sound_url = "res://Sounds/VideoDungeonCrawlKevinMacleod.ogg"
 
 [node name="ChestWicked" parent="Interactable" instance=ExtResource( 8 )]
+visible = false
 position = Vector2( 340, 147.249 )
 rotation = 4.71239
 sound_url = "res://Sounds/SomethingWickedShorter.ogg"
