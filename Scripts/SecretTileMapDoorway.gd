@@ -11,7 +11,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_Area2D_body_entered(body):
-	if not init:
+	if body.get("name") == "KinematicBody2D" and init:
 		if not sound_played:
 			SoundController.play_effect("res://Sounds/SuitOfArmorWalk.wav", -20)
 			sound_played = true
@@ -21,5 +21,4 @@ func _on_Area2D_body_entered(body):
 		get_parent().get_node("Interactable/ChestVideo").visible = true
 		get_parent().get_node("Interactable/ChestWicked").visible = true
 		visible = false
-	else:
 		init = false
