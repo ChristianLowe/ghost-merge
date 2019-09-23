@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/credits.gd" type="Script" id=1]
+[ext_resource path="res://TileSets/DungeonTileSets/left-arrow.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MenuButton.gd" type="Script" id=3]
+[ext_resource path="res://FlavorAssets/fonts/Bungee-Shade.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Actors/FadeIn.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "bounce"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4, 0.5, 0.601 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 0 ), Vector2( 6, 0 ), Vector2( 9, 0 ), Vector2( 6, 0 ), Vector2( 3, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=2]
+size = 78
+font_data = ExtResource( 4 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.292358
+margin_top = -1.0
+margin_right = 0.292358
+margin_bottom = -1.0
+script = ExtResource( 1 )
+
+[node name="Tutorial Area" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 150.0
+margin_top = 100.0
+margin_right = -150.0
+margin_bottom = -100.0
+rect_min_size = Vector2( 300, 250 )
+
+[node name="LeftButton" type="Button" parent="Tutorial Area"]
+margin_right = 1097.0
+margin_bottom = 65.0
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 3 )
+scene_to_load = "res://Scenes/TitleScreen.tscn"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Tutorial Area/LeftButton"]
+anims/bounce = SubResource( 1 )
+
+[node name="Label" type="Label" parent="Tutorial Area"]
+margin_top = 69.0
+margin_right = 1097.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 2 )
+text = "Thanks 
+for playing!"
+align = 1
+
+[node name="FadeIn" parent="." instance=ExtResource( 5 )]
+visible = false
+rect_scale = Vector2( 2.4, 1 )
+[connection signal="pressed" from="Tutorial Area/LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="fade_finished" from="FadeIn" to="." method="_on_FadeIn_fade_finished"]

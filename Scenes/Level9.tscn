@@ -18,7 +18,7 @@
 script = ExtResource( 1 )
 merge_count = 6
 level_count = 9
-next_scene_path = "res://Scenes/Credits.tscn"
+next_scene_path = "res://Scenes/Thanks.tscn"
 
 [node name="MergeCountLabel" parent="." instance=ExtResource( 2 )]
 
