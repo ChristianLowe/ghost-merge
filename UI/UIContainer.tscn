@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/UnmergeButton_normal.png" type="Texture" id=2]
@@ -9,6 +9,13 @@
 [ext_resource path="res://UI/ResetButton.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/ResetTexture_normal.png" type="Texture" id=8]
 [ext_resource path="res://UI/ResetTexture_clicked.png" type="Texture" id=9]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends MarginContainer
+
+func _input_event(event):
+	if event is InputEventMouseButton and event.is_pressed():
+		print('hi2')"
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends TextureButton
@@ -71,6 +78,7 @@ custom_constants/margin_right = 120
 custom_constants/margin_top = 80
 custom_constants/margin_left = 120
 custom_constants/margin_bottom = 80
+script = SubResource( 4 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 120.0

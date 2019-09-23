@@ -1,22 +1,21 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/RootScript.gd" type="Script" id=1]
 [ext_resource path="res://UI/MergeCountLabel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/UIContainer.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Tilemaps/Tilesets/DungeonTileset.tres" type="TileSet" id=4]
-[ext_resource path="res://TileSets/DungeonTileSets/tiles_dungeon_v1.1x2.png" type="Texture" id=5]
-[ext_resource path="res://Scripts/SecretTileMapDoorway.gd" type="Script" id=6]
-[ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Actors/Chest.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://UI/InteractButton.tscn" type="PackedScene" id=12]
-[ext_resource path="res://UI/UnmergeButton.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Actors/Transition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tilemaps/Tilesets/DungeonTileset.tres" type="TileSet" id=5]
+[ext_resource path="res://TileSets/DungeonTileSets/tiles_dungeon_v1.1x2.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/SecretTileMapDoorway.gd" type="Script" id=7]
+[ext_resource path="res://Actors/Interactable.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Actors/Chest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Actors/Lever.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Actors/Door.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 0/name = "tiles_dungeon_v1.1x2.png 0"
-0/texture = ExtResource( 5 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 128, 288, 32, 32 )
@@ -32,7 +31,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "tiles_dungeon_v1.1x2.png 1"
-1/texture = ExtResource( 5 )
+1/texture = ExtResource( 6 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 448, 512, 32, 32 )
@@ -65,9 +64,11 @@ next_scene_path = "res://Scenes/Level2.tscn"
 
 [node name="UIContainer" parent="CanvasLayer" instance=ExtResource( 3 )]
 
+[node name="Transition" parent="CanvasLayer" instance=ExtResource( 4 )]
+
 [node name="SecretTileMap" type="TileMap" parent="."]
 visible = false
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 3
 collision_mask = 3
@@ -82,7 +83,7 @@ collision_layer = 3
 collision_mask = 3
 format = 1
 tile_data = PoolIntArray( 786433, 536870912, 0 )
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="SecretTileMapDoorway"]
 collision_layer = 3
@@ -93,50 +94,46 @@ position = Vector2( 48.931, 400.732 )
 shape = SubResource( 2 )
 
 [node name="Tilemap" type="TileMap" parent="."]
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 3
 collision_mask = 3
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 3, 2, 0, 5, 3, 536870913, 5, 4, 1, 196610, 5, 1, 393219, 6, 0, 2, 7, 0, 1, 8, 0, 6, 65536, 0, 327680, 65537, 0, 131073, 65538, 0, 131074, 65539, 1, 327684, 65540, 1, 196613, 65541, 1, 327684, 65542, 0, 196613, 65543, 0, 327683, 65544, 0, 131078, 131072, 0, 65536, 131073, 0, 65538, 131074, 0, 327683, 131075, 0, 196613, 131076, 0, 262145, 131077, 0, 131077, 131078, 0, 262145, 131079, 0, 131077, 131080, 0, 262150, 196608, 0, 65536, 196609, 0, 65538, 196610, 0, 262147, 196611, 0, 262146, 196612, 0, 262147, 196613, 0, 327685, 196614, 0, 131076, 196615, 0, 327684, 196616, 0, 131078, 262144, 0, 131072, 262145, 0, 196610, 262146, 0, 196610, 262147, 0, 196613, 262148, 0, 131074, 262149, 0, 131074, 262150, 0, 131077, 262151, 0, 65538, 262152, 0, 327686, 327680, 0, 262144, 327681, 0, 65540, 327682, 0, 65541, 327683, 0, 262146, 327684, 0, 262148, 327685, 0, 65541, 327686, 0, 327685, 327687, 0, 327683, 327688, 0, 327686, 393216, 0, 262144, 393217, 0, 131077, 393218, 0, 131075, 393219, 0, 327685, 393220, 0, 131077, 393221, 0, 196610, 393222, 0, 327684, 393223, 0, 131073, 393224, 0, 131078, 458752, 0, 131072, 458753, 0, 262147, 458754, 0, 327685, 458755, 0, 327684, 458756, 0, 131073, 458757, 0, 262145, 458758, 0, 262145, 458759, 0, 196611, 458760, 0, 327686, 524288, 0, 131072, 524289, 0, 65539, 524290, 0, 196612, 524291, 0, 262147, 524292, 0, 65537, 524293, 0, 65538, 524294, 0, 327684, 524295, 0, 65538, 524296, 0, 262150, 589824, 0, 65536, 589825, 0, 262149, 589826, 0, 131076, 589827, 0, 327683, 589828, 0, 262147, 589829, 0, 131077, 589830, 0, 196612, 589831, 0, 131077, 589832, 0, 65542, 655360, 0, 131072, 655361, 0, 131073, 655362, 0, 196609, 655363, 0, 131073, 655364, 0, 131077, 655365, 0, 262146, 655366, 0, 131073, 655367, 0, 131074, 655368, 0, 131078, 720896, 0, 262144, 720897, 0, 65538, 720898, 0, 327681, 720899, 0, 262148, 720900, 0, 262149, 720901, 0, 196610, 720902, 0, 262145, 720903, 0, 131075, 720904, 0, 262150, 786432, 0, 393216, 786433, 1, 131073, 786434, 0, 393220, 786435, 0, 393217, 786436, 0, 393220, 786437, 0, 393221, 786438, 0, 393221, 786439, 0, 393219, 786440, 0, 393222 )
 
-[node name="Interactable" parent="." instance=ExtResource( 7 )]
+[node name="Interactable" parent="." instance=ExtResource( 8 )]
 
-[node name="ChestNight" parent="Interactable" instance=ExtResource( 8 )]
+[node name="ChestNight" parent="Interactable" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 47.3256, 463.816 )
 sound_url = "res://Sounds/NightInTheCastleKevinMacleod.ogg"
 
-[node name="ChestMetal" parent="Interactable" instance=ExtResource( 8 )]
+[node name="ChestMetal" parent="Interactable" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 80.4671, 463.783 )
 sound_url = "res://Sounds/EpicMetalInstrumentalChillOutRecords.ogg"
 
-[node name="ChestVideo" parent="Interactable" instance=ExtResource( 8 )]
+[node name="ChestVideo" parent="Interactable" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 112.654, 463.783 )
 sound_url = "res://Sounds/VideoDungeonCrawlKevinMacleod.ogg"
 
-[node name="ChestWicked" parent="Interactable" instance=ExtResource( 8 )]
+[node name="ChestWicked" parent="Interactable" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 145.328, 463.783 )
 sound_url = "res://Sounds/SomethingWickedShorter.ogg"
 
-[node name="Lever" parent="Interactable" instance=ExtResource( 9 )]
+[node name="Lever" parent="Interactable" instance=ExtResource( 10 )]
 position = Vector2( 209.307, 132.249 )
 
-[node name="Door" parent="." instance=ExtResource( 10 )]
+[node name="Door" parent="." instance=ExtResource( 11 )]
 position = Vector2( 143.339, 29.877 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 143.198, 162.793 )
 current = true
 
-[node name="Player" parent="." instance=ExtResource( 11 )]
+[node name="Player" parent="." instance=ExtResource( 12 )]
 position = Vector2( 100, 260 )
 z_index = 7
-
-[node name="Control" parent="." instance=ExtResource( 12 )]
-
-[node name="Control2" parent="." instance=ExtResource( 13 )]
 [connection signal="body_entered" from="SecretTileMapDoorway/Area2D" to="SecretTileMapDoorway" method="_on_Area2D_body_entered"]

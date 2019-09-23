@@ -7,6 +7,9 @@ onready var ghost_trail = load("res://Actors/GhostTrail.tscn")
 
 onready var unmerge_button = load("res://UI/UnmergeButton.tscn")
 onready var interact_button = load("res://UI/InteractButton.tscn")
+
+onready var transition = load("res://Actors/Transition.tscn")
+
 onready var hat_cane = load("res://Actors/HatCane.tscn")
 onready var merge_orb = load("res://Actors/MergeOrb.tscn")
 onready var hat_cane_left_texture = load("res://Sprites/Ghost/hat-cane-left.png")
@@ -28,9 +31,15 @@ var user_direction = null
 var modulate_default = 'ffffff'
 var modulate_active = 'ffc80a'
 var showing_player = true
+var fading_out = false
 
 func _ready():
 	$CanvasLayer/MergeCountLabel.update_merge_count(merge_count)
+	
+	var t = transition.instance()
+	t.get_node('AnimationPlayer').play('fade_in')
+	t.get_node('AnimationPlayer').seek(0.1)
+	$CanvasLayer.add_child(t)
 	
 	SignalBus.connect('interact', self, '_interact')
 	SignalBus.connect('unmerge', self, '_unmerge')
@@ -115,7 +124,17 @@ func show_player():
 func can_player_merge():
 	return merge_count > 0
 
-func change_scene():	
+func change_scene():
+	if not fading_out:
+		fading_out = true
+		
+		var t = transition.instance()
+		t.get_node('AnimationPlayer').play('fade_out')
+		t.get_node('AnimationPlayer').connect('animation_finished', self, '_change_scene')
+		$CanvasLayer.add_child(t)
+
+func _change_scene(unused):
+	print('sup')
 	get_tree().change_scene(next_scene_path)
 
 func _interact():
